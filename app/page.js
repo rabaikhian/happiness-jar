@@ -287,7 +287,7 @@ export default function Home() {
               </div>
               
               {/* Watermark logo centered directly below the jar */}
-              <div className="mt-1 sm:mt-2 -mb-3 sm:-mb-5 opacity-50 select-none pointer-events-none flex justify-center">
+              <div className="mt-1 sm:mt-2 -mb-6 sm:-mb-8 opacity-50 select-none pointer-events-none flex justify-center">
                 <img 
                   src="/logo.jpg" 
                   alt="ระบาย เขียน Logo" 
@@ -301,7 +301,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white/80 border-t border-amber-100 py-6 mt-12 text-center text-xs text-slate-500 relative z-10 select-none">
+      <footer className="bg-white/80 border-t border-amber-100 py-6 mt-2 sm:mt-4 text-center text-xs text-slate-500 relative z-10 select-none">
         <div className="max-w-6xl mx-auto px-4 space-y-2">
           <p className="flex items-center justify-center gap-1.5 font-bold text-slate-600">
             <span>Happiness Jar — พื้นที่แบ่งปันพลังบวกดิจิทัลปลอดภัย</span>
