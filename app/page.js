@@ -276,13 +276,24 @@ export default function Home() {
               <span className="text-xs font-bold text-amber-900/40">กำลังทำความสะอาดและปัดฝุ่นชั้นวาง...</span>
             </div>
           ) : (
-            <div className="flex flex-col items-center justify-center relative z-10" ref={jarRef}>
-              {/* Center: Interactive Glass Jar directly on background dot grid */}
-              <HappinessJar 
-                notes={notes} 
-                activeCategory={activeCategory} 
-                onDraw={handleDrawNote} 
-              />
+            <div className="flex flex-col items-center justify-center relative z-10">
+              {/* Jar container (with shake ref animation) */}
+              <div ref={jarRef} className="flex items-center justify-center">
+                <HappinessJar 
+                  notes={notes} 
+                  activeCategory={activeCategory} 
+                  onDraw={handleDrawNote} 
+                />
+              </div>
+              
+              {/* Watermark logo centered directly below the jar */}
+              <div className="mt-6 sm:mt-8 opacity-25 select-none pointer-events-none flex justify-center">
+                <img 
+                  src="/logo.jpg" 
+                  alt="ระบาย เขียน Logo" 
+                  className="w-24 h-24 sm:w-32 sm:h-32 object-contain grayscale mix-blend-multiply" 
+                />
+              </div>
             </div>
           )}
         </section>
@@ -536,15 +547,6 @@ export default function Home() {
           </div>
         )}
       </AnimatePresence>
-
-      {/* Subtly floating watermark logo in the bottom-left corner */}
-      <div className="fixed bottom-4 left-4 z-10 opacity-30 pointer-events-none select-none">
-        <img 
-          src="/logo.jpg" 
-          alt="ระบาย เขียน Logo Watermark" 
-          className="w-16 h-16 sm:w-24 sm:h-24 object-contain grayscale mix-blend-multiply" 
-        />
-      </div>
     </div>
   );
 }
