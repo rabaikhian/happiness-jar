@@ -536,6 +536,15 @@ export default function Home() {
           </div>
         )}
       </AnimatePresence>
+
+      {/* Subtly floating watermark logo in the bottom-left corner */}
+      <div className="fixed bottom-4 left-4 z-0 opacity-15 pointer-events-none select-none hidden sm:block">
+        <img 
+          src="/logo.jpg" 
+          alt="ระบาย เขียน Logo Watermark" 
+          className="w-20 h-20 sm:w-28 sm:h-28 object-contain grayscale mix-blend-multiply" 
+        />
+      </div>
     </div>
   );
 }
