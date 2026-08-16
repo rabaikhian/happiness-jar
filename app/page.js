@@ -201,7 +201,7 @@ export default function Home() {
             </div>
             <div>
               <h1 className="font-bold text-lg sm:text-xl text-slate-800 tracking-tight flex items-center gap-1.5">
-                <span>กระปุกปันปัน</span>
+                <span>Punpun Jar</span>
                 <span className="text-xs bg-rose-100 text-rose-600 font-medium px-2 py-0.5 rounded-full">กระปุกพลังบวก</span>
               </h1>
               <p className="text-xs text-slate-500 hidden sm:block">พื้นที่แบ่งปันรอยยิ้มและคำฮีลใจที่ไม่ระบุตัวตน</p>
@@ -304,7 +304,7 @@ export default function Home() {
       <footer className="bg-white/80 border-t border-amber-100 py-6 mt-2 sm:mt-4 text-center text-xs text-slate-500 relative z-10 select-none">
         <div className="max-w-6xl mx-auto px-4 space-y-2">
           <p className="flex items-center justify-center gap-1.5 font-bold text-slate-600">
-            <span>กระปุกปันปัน — พื้นที่แบ่งปันพลังบวกดิจิทัลปลอดภัย</span>
+            <span>Punpun Jar — พื้นที่แบ่งปันพลังบวกดิจิทัลปลอดภัย</span>
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
           </p>
           <p className="text-slate-400 max-w-xl mx-auto leading-relaxed">
