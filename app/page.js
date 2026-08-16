@@ -200,11 +200,11 @@ export default function Home() {
               <Archive className="w-6 h-6" />
             </div>
             <div>
-              <h1 className="font-bold text-lg sm:text-xl text-slate-800 tracking-tight flex items-center gap-1.5">
+              <h1 className="font-bold text-lg sm:text-xl text-slate-800 tracking-tight flex items-center gap-2">
                 <span>Punpun Jar</span>
-                <span className="text-xs bg-rose-100 text-rose-600 font-medium px-2 py-0.5 rounded-full">กระปุกพลังบวก</span>
+                <span className="text-xs text-slate-400 font-normal ml-1 select-none">พื้นที่แบ่งปันความสุข</span>
               </h1>
-              <p className="text-xs text-slate-500 hidden sm:block">พื้นที่แบ่งปันรอยยิ้มและคำฮีลใจที่ไม่ระบุตัวตน</p>
+              <p className="text-xs text-slate-500 hidden sm:block">ส่งต่อความสุขด้วยกระปุกปันปัน และคำฮีลใจที่ไม่ระบุตัวตน</p>
             </div>
           </div>
 
