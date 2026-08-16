@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Prompt:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #FDFBF7;
+  --foreground: #334155; /* Slate-700 from example */
+}
+
+@theme {
+  /* Font families */
+  --font-sans: 'Prompt', sans-serif;
+  --font-handwritten: 'Itim', cursive;
+
+  /* Custom colors */
+  --color-cream-50: #FFFDF9;
+  --color-cream-100: #FDFBF7;
+  --color-cream-200: #F7F3E9;
+  --color-cream-300: #EFE7D5;
+
+  --color-pastel-yellow: #FEF9C3;
+  --color-pastel-pink: #FCE7F3;
+  --color-pastel-green: #DCFCE7;
+  --color-pastel-purple: #F3E8FF;
+  --color-pastel-blue: #E0F2FE;
+  --color-pastel-orange: #FFEDD5;
+
+  --color-primary-400: #FB7185;
+  --color-primary-500: #F43F5E;
+  --color-primary-600: #E11D48;
+
+  /* Cozy shadows */
+  --shadow-cozy: 0 10px 25px -5px rgba(184, 134, 11, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-paper: 2px 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-jar: inset 0 0 15px rgba(255, 255, 255, 0.8), 0 12px 30px rgba(225, 180, 100, 0.15);
+}
+
+body {
+  background-color: #FDFBF7;
+  background-image: radial-gradient(#F0E6D2 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--foreground);
+  font-family: 'Prompt', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glass Jar specific styling */
+.jar-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: inset -5px -5px 15px rgba(230, 200, 160, 0.2), 0 15px 35px rgba(190, 150, 90, 0.12);
+}
+
+/* Sticky note custom interactive styling */
+.sticky-note {
+  transition: all 0.25s ease-in-out;
+}
+
+.sticky-note:hover {
+  transform: translateY(-6px) scale(1.02) rotate(0deg) !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+  z-index: 20;
+}
+
+/* Shaking animation keyframes */
+@keyframes shakeJar {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-8deg) translateX(-4px); }
+  40% { transform: rotate(8deg) translateX(4px); }
+  60% { transform: rotate(-5deg); }
+  80% { transform: rotate(5deg); }
+}
+
+.animate-shake {
+  animation: shakeJar 0.6s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F3E9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 99px;
+}
