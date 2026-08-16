@@ -285,6 +285,16 @@ export default function Home() {
                   onDraw={handleDrawNote} 
                 />
               </div>
+              
+              {/* Watermark logo centered directly below the jar */}
+              <div className="mt-6 sm:mt-8 mb-2 sm:mb-3 opacity-40 select-none pointer-events-none flex flex-col items-center justify-center">
+                <span className="text-[10px] sm:text-xs tracking-widest uppercase font-bold text-slate-400/80">Lovingly crafted by</span>
+                <img 
+                  src="/logo.png" 
+                  alt="ระบาย เขียน Logo" 
+                  className="w-40 sm:w-52 h-auto object-contain grayscale mix-blend-multiply mt-1.5" 
+                />
+              </div>
             </div>
           )}
         </section>
@@ -292,18 +302,8 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white/80 border-t border-amber-100 py-6 mt-6 text-center text-xs text-slate-500 relative z-10 select-none">
-        <div className="max-w-6xl mx-auto px-4 space-y-3 flex flex-col items-center">
-          {/* Credit Logo */}
-          <div className="opacity-40 flex flex-col items-center justify-center mb-1">
-            <span className="text-[10px] sm:text-xs tracking-widest uppercase font-bold text-slate-400/80">Lovingly crafted by</span>
-            <img 
-              src="/logo.png" 
-              alt="ระบาย เขียน Logo" 
-              className="w-36 sm:w-44 h-auto object-contain grayscale mix-blend-multiply mt-1" 
-            />
-          </div>
-
+      <footer className="bg-white/80 border-t border-amber-100 py-6 mt-0 text-center text-xs text-slate-500 relative z-10 select-none">
+        <div className="max-w-6xl mx-auto px-4 space-y-2">
           <p className="flex items-center justify-center gap-1.5 font-bold text-slate-600">
             <span>Punpun Jar - พื้นที่ปลอดภัยแบ่งปันความสุข</span>
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
