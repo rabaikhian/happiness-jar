@@ -289,7 +289,7 @@ export default function Home() {
               {/* Watermark logo centered directly below the jar */}
               <div className="mt-1 sm:mt-2 -mb-6 sm:-mb-8 opacity-50 select-none pointer-events-none flex justify-center">
                 <img 
-                  src="/logo.jpg" 
+                  src="/logo.png" 
                   alt="ระบาย เขียน Logo" 
                   className="w-48 sm:w-64 h-auto object-contain grayscale mix-blend-multiply" 
                 />
