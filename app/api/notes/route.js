@@ -28,15 +28,28 @@ const CRISIS_RESOURCES = {
   ]
 };
 
-// GET: Fetch all approved notes
+// GET: Fetch all approved notes (strictly within last 7 days)
 export async function GET() {
   try {
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+
     if (isSupabaseConfigured) {
+      // Passive database clean up of notes older than 7 days
+      try {
+        await supabase
+          .from('notes')
+          .delete()
+          .lt('created_at', sevenDaysAgo);
+      } catch (cleanError) {
+        console.error('Supabase passive cleanup error:', cleanError);
+      }
+
       const { data, error } = await supabase
         .from('notes')
         .select('*')
         .eq('is_approved', true)
         .lt('flag_count', 3)
+        .gte('created_at', sevenDaysAgo)
         .order('created_at', { ascending: false });
 
       if (error) {
