@@ -291,7 +291,7 @@ export default function Home() {
                 <img 
                   src="/logo.jpg" 
                   alt="ระบาย เขียน Logo" 
-                  className="w-36 h-36 sm:w-48 sm:h-48 object-contain grayscale mix-blend-multiply" 
+                  className="w-48 sm:w-64 h-auto object-contain grayscale mix-blend-multiply" 
                 />
               </div>
             </div>
