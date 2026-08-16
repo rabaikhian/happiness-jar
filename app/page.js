@@ -264,7 +264,7 @@ export default function Home() {
       </header>
 
       {/* Main Content Area */}
-      <main className="flex-grow flex flex-col items-center justify-start max-w-6xl w-full mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-4 z-10">
+      <main className="flex-grow flex flex-col items-center justify-center max-w-6xl w-full mx-auto px-4 sm:px-6 py-4 sm:pt-20 sm:pb-6 z-10">
 
 
 
