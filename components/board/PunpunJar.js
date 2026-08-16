@@ -9,7 +9,7 @@ export default function PunpunJar({ notes, activeCategory, onDraw }) {
 
   // Category mapping definitions
   const categoryMap = {
-    all: { name: 'พลังบวกทั้งหมด', label: '✨ กระปุกรวมใจ ✨', ribbonClass: 'bg-amber-400' },
+    all: { name: 'พลังบวกทั้งหมด', label: '✨ กระปุกปันปัน ✨', ribbonClass: 'bg-amber-400' },
     gratitude: { name: 'ขอบคุณความสุข', label: '🌸 ขอบคุณความสุข 🌸', ribbonClass: 'bg-rose-400' },
     morning: { name: 'พลังใจยามเช้า', label: '☀️ พลังใจยามเช้า ☀️', ribbonClass: 'bg-orange-400' },
     stranger: { name: 'ถึงคนแปลกหน้า', label: '💌 ถึงคนแปลกหน้า 💌', ribbonClass: 'bg-emerald-400' },
