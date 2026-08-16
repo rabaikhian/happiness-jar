@@ -1,7 +1,7 @@
 export default function manifest() {
   return {
-    name: 'Panpan Jar - กระปุกปันปัน',
-    short_name: 'Panpan Jar',
+    name: 'Punpun Jar - กระปุกปันปัน',
+    short_name: 'Punpun Jar',
     description: 'พื้นที่แบ่งปันรอยยิ้มและคำฮีลใจที่ไม่ระบุตัวตน',
     start_url: '/',
     display: 'standalone',

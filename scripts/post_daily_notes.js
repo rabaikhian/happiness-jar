@@ -91,7 +91,7 @@ const AUTHORS = [
 ];
 
 async function postDailyNotes() {
-  console.log('--- Starting Daily Panpan Note Injection ---');
+  console.log('--- Starting Daily Punpun Note Injection ---');
   
   // 1. Select 10 unique random notes from the pool
   const shuffled = [...MESSAGES_POOL].sort(() => 0.5 - Math.random());
