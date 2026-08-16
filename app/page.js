@@ -202,7 +202,7 @@ export default function Home() {
             <div>
               <h1 className="font-bold text-lg sm:text-xl text-slate-800 tracking-tight flex items-center gap-2">
                 <span>Punpun Jar</span>
-                <span className="text-xs text-slate-400 font-normal ml-1 select-none">พื้นที่แบ่งปันความสุข</span>
+                <span className="text-xs text-slate-400 font-normal ml-1 select-none">พื้นที่ปลอดภัยแบ่งปันความสุข</span>
               </h1>
               <p className="text-xs text-slate-500 hidden sm:block">ส่งต่อความสุขด้วยกระปุกปันปัน และคำฮีลใจที่ไม่ระบุตัวตน</p>
             </div>
@@ -305,11 +305,11 @@ export default function Home() {
       <footer className="bg-white/80 border-t border-amber-100 py-6 mt-2 sm:mt-4 text-center text-xs text-slate-500 relative z-10 select-none">
         <div className="max-w-6xl mx-auto px-4 space-y-2">
           <p className="flex items-center justify-center gap-1.5 font-bold text-slate-600">
-            <span>Punpun Jar — พื้นที่แบ่งปันพลังบวกดิจิทัลปลอดภัย</span>
+            <span>พื้นที่ปลอดภัยแบ่งปันความสุข</span>
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
           </p>
-          <p className="text-slate-400 max-w-xl mx-auto leading-relaxed">
-            ขับเคลื่อนด้วยแนวคิดจิตวิทยาเชิงบวก (Positive Psychology) มีระบบคัดกรองเนื้อหาอัตโนมัติ <br />
+          <p className="text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            ขับเคลื่อนด้วยแนวคิดการแบ่งปันความรู้สึกดี ๆ เป็นการส่งต่อความสุขให้เพิ่มขึ้น และช่วยขยายมุมมองการมีความสุขเป็นเรื่องง่ายกว่าที่เราคิด เบื้องต้นด้วยระบบ Ai <br />
             หากคุณกำลังเผชิญช่วงเวลาที่ยากลำบาก สามารถติดต่อสายด่วนสุขภาพจิต <strong>1323</strong> (โทรฟรี 24 ชม.)
           </p>
         </div>
