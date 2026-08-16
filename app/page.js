@@ -202,7 +202,7 @@ export default function Home() {
             <div>
               <h1 className="font-bold text-lg sm:text-xl text-slate-800 tracking-tight flex items-center gap-2">
                 <span>Punpun Jar</span>
-                <span className="text-xs text-slate-400 font-normal ml-1 select-none">พื้นที่ปลอดภัยแบ่งปันความสุข</span>
+                <span className="text-xs text-slate-400 font-normal ml-1 select-none hidden sm:inline-block">พื้นที่ปลอดภัยแบ่งปันความสุข</span>
               </h1>
               <p className="text-xs text-slate-500 hidden sm:block">ส่งต่อความสุขด้วยกระปุกปันปัน และคำฮีลใจที่ไม่ระบุตัวตน</p>
             </div>
