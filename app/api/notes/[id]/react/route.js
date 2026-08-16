@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server';
 import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 import { reactMockNote } from '@/lib/mockDb';
 
+export const runtime = 'edge';
+
+
 export async function POST(request, { params }) {
   try {
     const { id } = await params; // Await params for Next.js 15+ / 16 compatibility

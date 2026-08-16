@@ -3,6 +3,9 @@ import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 import { getMockNotes, saveMockNote } from '@/lib/mockDb';
 import { moderateContent } from '@/lib/moderation';
 
+export const runtime = 'edge';
+
+
 // Mental health crisis resources in Thailand (Same warm crisis messages)
 const CRISIS_RESOURCES = {
   intro: 'ขออภัยด้วยนะคะ ข้อความของคุณไม่ผ่านเกณฑ์ความปลอดภัยของเรา เนื่องจากอาจมีคำพูดที่สื่อถึงความตึงเครียด การทำร้ายตัวเอง หรืออารมณ์ที่อ่อนไหวเป็นพิเศษ หากคุณหรือคนใกล้ชิดกำลังรู้สึกเหนื่อยล้า ท้อแท้ หรือเผชิญกับช่วงเวลาที่ยากลำบากในชีวิต พวกเราขอโอบกอดคุณ และอยากให้รู้ว่าคุณไม่ได้อยู่ตัวคนเดียวนะคะ มีคนที่พร้อมรับฟังและช่วยเหลือคุณอยู่เสมอค่ะ',

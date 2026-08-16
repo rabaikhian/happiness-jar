@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS notes (
   content TEXT NOT NULL,
   color VARCHAR(50) DEFAULT 'yellow', -- yellow, mint, peach, lavender, blue
   category VARCHAR(100), -- #Gratitude, #Hope, #Comfort, #DailyJoy
+  author VARCHAR(100) DEFAULT 'เพื่อนแปลกหน้าผู้หวังดี',
   likes_count INT DEFAULT 0,
   hugs_count INT DEFAULT 0,
   sparkles_count INT DEFAULT 0,
