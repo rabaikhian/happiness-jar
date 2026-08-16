@@ -237,7 +237,7 @@ export default function NoteForm({ isOpen, onClose, onSubmit }) {
                     <AlertCircle className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">ข้อความของคุณอาจมีคำที่ไม่เหมาะสมหรือคำรุนแรง</p>
-                      <p className="text-[11px] text-rose-600 mt-0.5">ระบบ Happiness Jar มุ่งเน้นการสร้างพื้นที่ปลอดภัย โปรดปรับเปลี่ยนคำพูดให้เป็นเชิงบวกหรือละมุนขึ้นครับ ❤️</p>
+                      <p className="text-[11px] text-rose-600 mt-0.5">ระบบ Panpan Jar มุ่งเน้นการสร้างพื้นที่ปลอดภัย โปรดปรับเปลี่ยนคำพูดให้เป็นเชิงบวกหรือละมุนขึ้นครับ ❤️</p>
                     </div>
                   </div>
                 )}

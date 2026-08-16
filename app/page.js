@@ -22,7 +22,7 @@ import { startAmbient, stopAmbient, playPop } from '@/lib/audio';
 import confetti from 'canvas-confetti';
 
 // Import custom components
-import HappinessJar from '@/components/board/HappinessJar';
+import PanpanJar from '@/components/board/PanpanJar';
 import NoteForm from '@/components/board/NoteForm';
 
 // Global maps for reactions and categories
@@ -201,7 +201,7 @@ export default function Home() {
             </div>
             <div>
               <h1 className="font-bold text-lg sm:text-xl text-slate-800 tracking-tight flex items-center gap-1.5">
-                <span>Happiness Jar</span>
+                <span>Panpan Jar</span>
                 <span className="text-xs bg-rose-100 text-rose-600 font-medium px-2 py-0.5 rounded-full">กระปุกพลังบวก</span>
               </h1>
               <p className="text-xs text-slate-500 hidden sm:block">พื้นที่แบ่งปันรอยยิ้มและคำฮีลใจที่ไม่ระบุตัวตน</p>
@@ -279,7 +279,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center relative z-10">
               {/* Jar container (with shake ref animation) */}
               <div ref={jarRef} className="flex items-center justify-center">
-                <HappinessJar 
+                <PanpanJar 
                   notes={notes} 
                   activeCategory={activeCategory} 
                   onDraw={handleDrawNote} 
@@ -304,7 +304,7 @@ export default function Home() {
       <footer className="bg-white/80 border-t border-amber-100 py-6 mt-2 sm:mt-4 text-center text-xs text-slate-500 relative z-10 select-none">
         <div className="max-w-6xl mx-auto px-4 space-y-2">
           <p className="flex items-center justify-center gap-1.5 font-bold text-slate-600">
-            <span>Happiness Jar — พื้นที่แบ่งปันพลังบวกดิจิทัลปลอดภัย</span>
+            <span>Panpan Jar — พื้นที่แบ่งปันพลังบวกดิจิทัลปลอดภัย</span>
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
           </p>
           <p className="text-slate-400 max-w-xl mx-auto leading-relaxed">

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { playChime } from '@/lib/audio';
 
-export default function HappinessJar({ notes, activeCategory, onDraw }) {
+export default function PanpanJar({ notes, activeCategory, onDraw }) {
   const [isDrawing, setIsDrawing] = useState(false);
 
   // Category mapping definitions

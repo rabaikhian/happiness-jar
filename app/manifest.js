@@ -1,7 +1,7 @@
 export default function manifest() {
   return {
-    name: 'Happiness Jar - กระปุกพลังบวก',
-    short_name: 'Happiness Jar',
+    name: 'Panpan Jar - กระปุกปันปัน',
+    short_name: 'Panpan Jar',
     description: 'พื้นที่แบ่งปันรอยยิ้มและคำฮีลใจที่ไม่ระบุตัวตน',
     start_url: '/',
     display: 'standalone',
