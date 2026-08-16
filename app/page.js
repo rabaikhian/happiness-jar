@@ -287,11 +287,12 @@ export default function Home() {
               </div>
               
               {/* Watermark logo centered directly below the jar */}
-              <div className="mt-1 sm:mt-2 -mb-6 sm:-mb-8 opacity-50 select-none pointer-events-none flex justify-center">
+              <div className="mt-6 sm:mt-8 -mb-4 sm:-mb-6 opacity-40 select-none pointer-events-none flex flex-col items-center justify-center">
+                <span className="text-[10px] sm:text-xs tracking-widest uppercase font-bold text-slate-400/80">Lovingly crafted by</span>
                 <img 
                   src="/logo.png" 
                   alt="ระบาย เขียน Logo" 
-                  className="w-48 sm:w-64 h-auto object-contain grayscale mix-blend-multiply" 
+                  className="w-40 sm:w-52 h-auto object-contain grayscale mix-blend-multiply mt-1.5" 
                 />
               </div>
             </div>
