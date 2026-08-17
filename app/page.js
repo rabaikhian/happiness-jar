@@ -62,6 +62,7 @@ export default function Home() {
 
   // Board Modal State (Read all notes)
   const [isBoardOpen, setIsBoardOpen] = useState(false);
+  const [renderBoardContent, setRenderBoardContent] = useState(false);
   const [boardCategory, setBoardCategory] = useState('all');
   const [sortBy, setSortBy] = useState('newest');
 
@@ -334,7 +335,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="absolute inset-0"
-              onClick={() => setIsBoardOpen(false)}
+              onClick={() => { setIsBoardOpen(false); setRenderBoardContent(false); }}
             />
 
             {/* Board Container */}
@@ -343,6 +344,11 @@ export default function Home() {
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.95, y: 30, opacity: 0 }}
               transition={{ type: 'spring', damping: 22, stiffness: 280 }}
+              onAnimationComplete={() => {
+                if (isBoardOpen) {
+                  setRenderBoardContent(true);
+                }
+              }}
               className="relative z-10 w-full max-w-5xl h-[85vh] bg-cream-100 rounded-3xl p-6 shadow-2xl border border-amber-100 flex flex-col justify-between overflow-hidden"
               style={{
                 backgroundImage: 'radial-gradient(#F0E6D2 1px, transparent 1px)',
@@ -351,7 +357,7 @@ export default function Home() {
             >
               {/* Close Button */}
               <button 
-                onClick={() => setIsBoardOpen(false)}
+                onClick={() => { setIsBoardOpen(false); setRenderBoardContent(false); }}
                 className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-600 transition cursor-pointer"
               >
                 <X className="w-5 h-5" />
@@ -402,9 +408,14 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Grid Content with custom scrollbar */}
+              {/* Grid Content with custom scrollbar, deferred rendering during animation */}
               <div className="flex-1 overflow-y-auto pr-1 pb-4">
-                {filteredNotesForBoard.length === 0 ? (
+                {!renderBoardContent ? (
+                  <div className="flex flex-col items-center justify-center py-20 gap-3">
+                    <div className="w-8 h-8 rounded-full border-4 border-amber-800/20 border-t-amber-800 animate-spin"></div>
+                    <span className="text-xs font-bold text-amber-900/40">กำลังเปิดหีบจดหมาย...</span>
+                  </div>
+                ) : filteredNotesForBoard.length === 0 ? (
                   <div className="text-center py-20 bg-white/60 rounded-3xl border border-dashed border-amber-200">
                     <div className="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-3">
                       <Archive className="w-8 h-8" />
