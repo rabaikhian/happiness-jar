@@ -134,12 +134,14 @@ export default function Home() {
     setDrawnNote(note);
     setIsDrawOpen(true);
     
-    // Trigger confetti upon draw success
-    confetti({
-      particleCount: 55,
-      spread: 80,
-      origin: { y: 0.6 }
-    });
+    // Trigger confetti after the entry transition of the modal finishes (350ms) to ensure absolute smoothness
+    setTimeout(() => {
+      confetti({
+        particleCount: 55,
+        spread: 80,
+        origin: { y: 0.6 }
+      });
+    }, 350);
   };
 
   const handleCloseDraw = () => {
@@ -325,7 +327,7 @@ export default function Home() {
       {/* Board Modal (Read All Notes) */}
       <AnimatePresence>
         {isBoardOpen && (
-          <div className="fixed inset-0 z-40 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm select-none">
+          <div className="fixed inset-0 z-40 flex items-center justify-center p-4 bg-slate-900/50 select-none">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -461,7 +463,7 @@ export default function Home() {
       {/* Drawn Note Detail Modal (Rendered at Root level to fix stacking context bug) */}
       <AnimatePresence>
         {isDrawOpen && drawnNote && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-slate-900/40 backdrop-blur-sm">
+          <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-slate-900/50">
             {/* Modal Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
