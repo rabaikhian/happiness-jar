@@ -45,11 +45,9 @@ body {
 
 /* Glass Jar specific styling */
 .jar-glass {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 100%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 3px solid rgba(255, 255, 255, 0.9);
-  box-shadow: inset -5px -5px 15px rgba(230, 200, 160, 0.2), 0 15px 35px rgba(190, 150, 90, 0.12);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.15) 100%);
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: inset -5px -5px 15px rgba(230, 200, 160, 0.15), 0 15px 35px rgba(190, 150, 90, 0.08);
 }
 
 /* Sticky note custom interactive styling */

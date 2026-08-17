@@ -99,8 +99,18 @@ export default function PunpunJar({ notes, activeCategory, onDraw }) {
           {/* Inner bottom glow */}
           <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 w-[85%] h-16 sm:h-20 rounded-full bg-gradient-to-t from-white/20 to-transparent blur-[4px] sm:blur-[5px]"></div>
 
-          {/* Floating themed slips inside the jar (arranged beautifully at the bottom) */}
-          <div className="absolute inset-x-0 bottom-16 sm:bottom-20 top-16 sm:top-20 px-4 sm:px-8 flex flex-wrap gap-2.5 items-end justify-center pointer-events-none mb-4 sm:mb-6 overflow-hidden">
+          {/* Floating themed slips inside the jar (arranged beautifully at the bottom, optimized parent animation loop) */}
+          <motion.div 
+            className="absolute inset-x-0 bottom-16 sm:bottom-20 top-16 sm:top-20 px-4 sm:px-8 flex flex-wrap gap-2.5 items-end justify-center pointer-events-none mb-4 sm:mb-6 overflow-hidden"
+            animate={{
+              y: [0, -3, 0]
+            }}
+            transition={{
+              duration: 5.5,
+              repeat: Infinity,
+              ease: 'easeInOut'
+            }}
+          >
             {duplicatedSlips.map((slipColor, idx) => {
               // Deterministic offsets based on index to distribute slips nicely
               const rotation = Math.sin(idx * 1.9) * 28;
@@ -108,26 +118,17 @@ export default function PunpunJar({ notes, activeCategory, onDraw }) {
               const yOffset = Math.sin(idx * 0.8) * 12;
               
               return (
-                <motion.div
+                <div
                   key={idx}
                   className="w-11 h-4 sm:w-16 sm:h-5 rounded shadow-sm border border-white/40 shrink-0"
                   style={{
                     backgroundColor: slipColor,
                     transform: `rotate(${rotation}deg) translate(${xOffset}px, ${yOffset}px)`,
                   }}
-                  animate={{
-                    y: [0, -4, 0],
-                  }}
-                  transition={{
-                    duration: 3.5 + (idx % 3),
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                    delay: idx * 0.12
-                  }}
                 />
               );
             })}
-          </div>
+          </motion.div>
 
           {/* Ribbon around neck */}
           <div className={`absolute top-5 sm:top-6 left-0 right-0 h-2 sm:h-2.5 shadow-inner flex items-center justify-center ${currentCat.ribbonClass}`}>
